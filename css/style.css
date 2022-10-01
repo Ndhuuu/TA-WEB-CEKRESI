@@ -1,0 +1,26 @@
+html {
+    scroll-behavior: smooth;
+} 
+
+.bi-facebook {
+    color: rgb(54, 38, 177);
+}
+
+.bi-instagram {
+    color: #ed0b4b;
+}
+
+.bi-whatsapp {
+    color: #0de35f;
+}
+.navbar {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+#main {
+    padding-top: 40px;
+}
