@@ -24,3 +24,34 @@ html {
 #main {
     padding-top: 40px;
 }
+
+.gambar-latar {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(assets/background.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .gambar-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .tombol{
+    background-color: #25316D !important;
+}
+
+.padL-R{
+    padding-left: 17rem;
+    padding-right: 17rem;
+}
+
+/* Media Query 1200*/
+@media screen and (max-width: 1200px) {
+    
+}
+
+/* Media Query 768 */
+@media screen and (max-width: 768px) {
+
+}
