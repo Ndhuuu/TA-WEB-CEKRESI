@@ -1,0 +1,77 @@
+html {
+    scroll-behavior: smooth;
+} 
+
+.bi-facebook {
+    color: rgb(54, 38, 177);
+}
+
+.bi-instagram {
+    color: #ed0b4b;
+}
+
+.bi-whatsapp {
+    color: #0de35f;
+}
+.navbar {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+#main {
+    padding-top: 40px;
+}
+
+.nav-col {
+    background-color: #25316D;
+}
+
+.btn-col {
+    background-color: #25316D;
+}
+
+.btn-col:hover {
+    background-color: #813E7F !important;
+}
+
+.gambar-latar {
+    background: linear-gradient(rgba(58, 140, 214, 0.8), rgba(0, 201, 214, 0.8)), url(../img/background.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .gambar-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+
+.padL-R{
+    padding-left: 17rem;
+    padding-right: 17rem;
+}
+
+/* Media Query 1200*/
+@media screen and (max-width: 1200px) {
+
+}
+
+/* Media Query 990 */
+@media screen and (max-width: 990px) {
+    .padL-R{
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+}
+
+/* Media Query 768 */
+@media screen and (max-width: 768px) {
+    .padL-R{
+        padding-left: 0;
+        padding-right: 0;
+    } 
+}
