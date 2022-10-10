@@ -58,18 +58,23 @@ $('#search-button').on('click', function() {
                    
 
                     <br>
-                    <h4 class="mb-2">II. Status Pengiriman</h4>
-                    <table class="table">
-                        <thead>
-                            <tr class="text-center">
-                                <th>Tanggal</th>
-                                <th>Keterangan</th>
-                            </tr>
-                        </thead>
-                        <tbody class="history">
-                            
-                        </tbody>
-                    </table>
+                    <div class="card br-box">
+                        <div class="card">
+                            <h5 class="card-header br-top text-white">Status Pengiriman</h5>
+                            <table class="table">
+                            <thead>
+                                <tr class="text-center">
+                                <th scope="col">Tanggal</th>
+                                <th scope="col">Keterangan</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-group-divider history">
+                                
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+
                     </div>
                 `);
 
