@@ -25,44 +25,37 @@ $('#search-button').on('click', function() {
                 let history = result.data.history.reverse();
                 let tanggalKirim = history[0].date;
 
-                $('.info').removeClass('text-center')
+                $('.info').removeClass('text-center').removeClass('padL-R')
                 $('.info').html(`
                     <div data-aos="zoom-in-down">
-                    <h4 class="mb-2">I. Informasi Pengiriman</h4>
-                    <table class="table">
-                        <tbody>
-                        <tr>
-                            <th scope="row">No.Resi</th>
-                            <td>:</td>
-                            <td>${summary.awb}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Status</th>
-                            <td>:</td>
-                            <td>${summary.status}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Service</th>
-                            <td>:</td>
-                            <td>${summary.service}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Tanggal pengiriman</th>
-                            <td>:</td>
-                            <td>${tanggalKirim}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Pengirim</th>
-                            <td>:</td>
-                            <td>${detail.shipper} <br> ${detail.origin}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Penerima</th>
-                            <td>:</td>
-                            <td>${detail.receiver} <br> ${detail.destination}</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="card br-box">
+                        <div class="card">
+                            <h5 class="card-header br-top text-white">Informasi Pengiriman</h5>
+                            <table class="table">
+                            <thead>
+                                <tr>
+                                <th scope="col">No. Resi</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Service</th>
+                                <th scope="col">Tanggal Pengiriman</th>
+                                <th scope="col">Pengirim</th>
+                                <th scope="col">Penerima</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-group-divider">
+                                <tr>
+                                <td>${summary.awb}</td>
+                                <td>${summary.status}</td>
+                                <td>${summary.service}</td>
+                                <td>${tanggalKirim}</td>
+                                <td>${detail.shipper} <br> ${detail.origin}</td>
+                                <td>${detail.receiver} <br> ${detail.destination}</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                   
 
                     <br>
                     <h4 class="mb-2">II. Status Pengiriman</h4>
@@ -93,7 +86,7 @@ $('#search-button').on('click', function() {
             },
             400 : function(result) {
 
-                $('.info').removeClass('col-md-12').addClass('col-md-6').removeClass('text-center')
+                $('.info').removeClass('col-md-12').addClass('padL-R')
                 if( result.responseJSON.message == "Parameters `courier` and `awb` is required" ) {
                     $('.info').html(`
                     <div class="alert alert-danger" role="alert">
@@ -101,7 +94,7 @@ $('#search-button').on('click', function() {
                     </div>
                     `);
                 } else {
-                    $('.info').removeClass('col-md-12').addClass('col-md-8').removeClass('text-center')
+                    $('.info').removeClass('col-md-12').addClass('padL-R')
                     $('.info').html(`
                         <div class="alert alert-danger time-out" role="alert">
                             Nomor resi tidak ada, mohon periksa lagi nomor resi / jasa pengiriman yang dipilih !

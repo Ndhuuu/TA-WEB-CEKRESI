@@ -55,6 +55,15 @@ html {
     padding-right: 17rem;
 }
 
+.br-box {
+    border-color: #25316D !important;
+}
+.br-top {
+    background-color: #25316D !important;
+}
+
+
+
 /* Media Query 1200*/
 @media screen and (max-width: 1200px) {
 
