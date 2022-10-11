@@ -2,17 +2,22 @@ html {
     scroll-behavior: smooth;
 } 
 
+.bi-whatsapp {
+    color: rgb(37, 211, 102);
+}
+
+.bi-telegram {
+    color: #0088cc;
+}
+
 .bi-facebook {
-    color: rgb(54, 38, 177);
+    color: rgb(59, 89, 152);
 }
 
 .bi-instagram {
-    color: #ed0b4b;
+    color: rgb(225, 48, 108);
 }
 
-.bi-whatsapp {
-    color: #0de35f;
-}
 .navbar {
     position: fixed;
     z-index: 999;
@@ -35,6 +40,10 @@ html {
 
 .btn-col:hover {
     background-color: #813E7F !important;
+}
+
+.contacts-col {
+    color: #FD841F !important;
 }
 
 .gambar-latar {
