@@ -7,18 +7,18 @@ $('#search-button').on('click', function() {
     $('.info').html(`
             <img src="img/Loading.gif" alt="Loading gif" width="150" class="mt-5 img-fluid ">
     `);
-    
+
     $.ajax({
         url: 'https://api.binderbyte.com/v1/track',
         type: 'GET',
         dataType: 'json',
         data: {
-            'api_key' : '55c9b547eabef7ce959e9f7c2db425421bf0ed994ceb20d3970523fe603b568d',
-            'courier' : $('.kurir option:selected').val(),
-            'awb' : $('#search-input').val()
-        }, 
+            'api_key': '55c9b547eabef7ce959e9f7c2db425421bf0ed994ceb20d3970523fe603b568d',
+            'courier': $('.kurir option:selected').val(),
+            'awb': $('#search-input').val()
+        },
         statusCode: {
-            200 : function(result) {
+            200: function(result) {
                 const jasa = $('.kurir option:selected').text();
                 let summary = result.data.summary;
                 let detail = result.data.detail;
@@ -78,7 +78,7 @@ $('#search-button').on('click', function() {
                     </div>
                 `);
 
-                $.each(history, function(i, data) { 
+                $.each(history, function(i, data) {
                     $('.history').append(`
                         <tr>
                             <td>${data.date}</td>
@@ -89,10 +89,10 @@ $('#search-button').on('click', function() {
                     $('#search-input').val('');
                 });
             },
-            400 : function(result) {
+            400: function(result) {
 
                 $('.info').removeClass('col-md-12').addClass('padL-R')
-                if( result.responseJSON.message == "Parameters `courier` and `awb` is required" ) {
+                if (result.responseJSON.message == "Parameters `courier` and `awb` is required") {
                     $('.info').html(`
                     <div class="alert alert-danger" role="alert">
                         Harap masukkan <strong>nomor resi</strong> !
@@ -108,7 +108,7 @@ $('#search-button').on('click', function() {
                 }
                 // console.log(result.responseJSON.message);
             },
-            500 : function() {
+            500: function() {
                 $('.info').removeClass('col-md-12').addClass('col-md-8').removeClass('text-center')
                 $('.info').html(`
                     <div class="alert alert-danger time-out" role="alert">
@@ -118,6 +118,5 @@ $('#search-button').on('click', function() {
             }
 
         }
-    }); 
+    });
 });
-
