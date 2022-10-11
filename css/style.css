@@ -42,10 +42,6 @@ html {
     background-color: #813E7F !important;
 }
 
-.contacts-col {
-    color: #FD841F !important;
-}
-
 .gambar-latar {
     background: linear-gradient(rgba(58, 140, 214, 0.8), rgba(0, 201, 214, 0.8)), url(../img/background.jpg);
     background-position: top;
